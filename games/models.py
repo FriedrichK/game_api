@@ -14,6 +14,7 @@ class Game(BaseModel):
     min_players = models.IntegerField()
     max_players = models.IntegerField()
     started = models.DateTimeField(null=True)
+    failed = models.DateTimeField(null=True)
     ended = models.DateTimeField(null=True)
 
 

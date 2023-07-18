@@ -8,7 +8,7 @@ from games.models import Game, GameUser, GameTopic
 class GameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
-        fields = ("id", "name", "min_players", "max_players", "created", "started")
+        fields = ("id", "name", "min_players", "max_players", "created", "failed", "started")
 
 
 class GameUserSerializer(serializers.ModelSerializer):
