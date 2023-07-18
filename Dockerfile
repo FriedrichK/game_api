@@ -5,4 +5,4 @@ WORKDIR /opt/api
 RUN pip install -r requirements.txt
 RUN /opt/api/manage.py makemigrations
 RUN /opt/api/manage.py migrate
-ENTRYPOINT /opt/api/manage.py runserver
+ENTRYPOINT /opt/api/manage.py runserver 0.0.0.0:8000

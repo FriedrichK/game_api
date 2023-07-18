@@ -17,7 +17,7 @@ class CreateGameAPIView(APIView):
         serializer = CreateGameViewSerializer(data=request.data)
         serializer.is_valid()
 
-        endpoint: str = settings.CONDUDCTOR_API_ENDPOINT + "/workflow/play_game_round"
+        endpoint: str = settings.CONDUCTOR_API_ENDPOINT + "/workflow/play_game_round"
 
         data: dict = {
             "name": serializer.validated_data.get("name"),
